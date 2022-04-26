@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Cobertura Fidelis</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-5">
+				<div class="card mt-4">
+					<div class="card-header text-center h1">Consultar cobertura</div>
+					<div class="card-body">
+						<form action="#" th:action="@{/form/getapi}" th:object="${documento}" method="post">
+							<div class="row form-group">
+								<p class="text-center">Rut: <input class="col-md-4 offset-0 mt-4" type="number" min="1"
+										max="9999999999" value="" th:field="*{rut}" /></p>
+							</div>
+							<div class="row form-group">
+								<p><input type="submit" class="btn btn-success col-md-4 offset-4 mt-4"
+										value="Consultar" /></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
